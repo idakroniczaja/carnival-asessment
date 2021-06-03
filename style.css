@@ -8,7 +8,7 @@ header{
 and some padding. Then I targeted that specific h2 in css with animation. 
 */
 
-.letters-movement{
+/* .letters-movement{
     background: white;
     padding: 0.5em 0;
 }
@@ -26,12 +26,12 @@ and some padding. Then I targeted that specific h2 in css with animation.
 .letters-movement h2 span{
     margin-right: 1em;
 
-}
+} */
 
-@keyframes textmove {
+/* @keyframes textmove {
     0% {left: 100vw}
     100% {left: -350px}
-}
+} */
 
 .ccl-tout-front{
     background-color: blue;

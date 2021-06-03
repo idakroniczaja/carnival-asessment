@@ -1,54 +1,60 @@
 /*
 1. assigment: Add white bar under the header and animate the copu "Carnival Choose Fun" to cross the screen as shown below.
--I added <div> under header with class name "letter-movement" and h2 tag inside of that div. I applied white background on div, 
-and some padding. Then I targeted that specific h2 in css with animation. 
+EXPLANATION:
+-I added <div> under header with some stylings and h2 tag inside of that div and created an CSS animation frame.
 */
 
-CODE:
+APPLY THIS CODE TO "ELEMENTS":
 
-.letters-movement{
-    background: white;
-    padding: 0.5em 0;
-}
-.letters-movement h2{
-    font-size: 2rem;
-    width: 350px;
-    position: relative;
-    font-family: 'TempoStd';
-    animation-name: textmove;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
+ <header>
+    /* 
+    HEADER CONTENT
+    */
+    </header>
 
-.letters-movement h2 span{
-    margin-right: 1em;
 
-}
-
-@keyframes textmove {
-    0% {left: 100vw}
-    100% {left: -350px}
-}
+    <div style="background: white;
+     padding: 0.5em 0;">
+        <h2 >
+        <style>
+            h2{
+              font-size: 2rem;
+        width: 350px;
+        position: relative;
+        font-family: 'TempoStd';
+        animation-name: textmove;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  
+            }
+            @keyframes textmove {
+                0% {left: 100vw}
+                100% {left: -350px}
+            }
+        </style>
+        <span style=" margin-right: 1em;">Carnival</span> Choose Fun!</h2>
+    </div>
 
 /*
 2. assigment: Rearange the destination tiles to be in Alphabetic order.
 
 */
 
-I solved this with simple DOM manipulation:
+EXPLANATION: 
+-I solved this with simple DOM manipulation:
 
-1. calling parent of all tiles
+1. calling parent of all tiles with querySelector and class name
 
-2. creating function which sorts all tiles aphabetically by aria-label of <a> tag
+2. creating function which sorts all tiles aphabetically by aria-label of <a> tag(it could have been done with targeting innerText, or outerText)
 
-3. EXPLAINING HOW FUNCITON WORKS:
-   - turning Node list into array for easier manipulation a
-   - applyinng high order function sort(), 
-   - replacing existing order with new order 
+3. Then I crated function which: 
+   - turns Node list into array so I could apply array methods (HOF)
+   - sorts all tiles inside of paretn element with HOF sort(), 
+   - replaces existing order with just created order 
 
 
-CODE:
+APPLY FOLLOWING CODE TO CONSOLE:
+
 let el = document.querySelector('.tiles.ccl-tout-wrap')
 
 function sortByName(){
@@ -72,10 +78,15 @@ sortByName()
 
 /*
 3. assigment: Add white bar under the header and animate the copu "Carnival Choose Fun" to cross the screen as shown below.
--I added <div> under header with class name "letter-movement" and h2 tag inside of that div. I applied white background on div, 
-and some padding. Then I targeted that specific h2 in css with animation. 
 */
 
+EXPLANATION:
+-I fetched data and targeted only maxPrice from results, and stored it in the variable called maxPrice
+Then, I created new element named price which i appended to the h2 in the tile.
+
+
+
+APPLY THIS CODE TO THE CONSOLE:
 fetch('https://www.carnival.com/cruisesearch/api/search?numAdults=2&pageNumber=1&pageSize=8&dest=c',
 {mode: "no-cors"}
 )
