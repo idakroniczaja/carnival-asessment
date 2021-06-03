@@ -1,0 +1,47 @@
+header{
+    background-color: antiquewhite;
+    height: 20vh;
+}
+/*
+1. assigment: Add white bar under the header and animate the copu "Carnival Choose Fun" to cross the screen as shown below.
+-I added <div> under header with class name "letter-movement" and h2 tag inside of that div. I applied white background on div, 
+and some padding. Then I targeted that specific h2 in css with animation. 
+*/
+
+.letters-movement{
+    background: white;
+    padding: 0.5em 0;
+}
+.letters-movement h2{
+    font-size: 2rem;
+    width: 350px;
+    position: relative;
+    font-family: 'TempoStd';
+    animation-name: textmove;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.letters-movement h2 span{
+    margin-right: 1em;
+
+}
+
+@keyframes textmove {
+    0% {left: 100vw}
+    100% {left: -350px}
+}
+
+.ccl-tout-front{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    color: whitesmoke;
+}
+
+/*
+2. assigment: Rearange the destination tiles to be in Alphabetic order.
+-I added <div> under header with class name "letter-movement" and h2 tag inside of that div. I applied white background on div, 
+and some padding. Then I targeted that specific h2 in css with animation. 
+*/
